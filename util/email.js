@@ -68,7 +68,7 @@ const verifiedUser = async (getUser) => {
 			html: data,
 		};
 
-		myTransport.sendMail(mailOptions, () => {
+		transporter.sendMail(mailOptions, () => {
 			console.log("sent successfully");
 		});
 	} catch (error) {
@@ -118,7 +118,7 @@ const verifiedByAdmin = async (getUser) => {
 			html: data,
 		};
 
-		myTransporter.sendMail(mailOptions, () => {
+		transporter.sendMail(mailOptions, () => {
 			console.log("sent successfully to Admin");
 		});
 	} catch (error) {
